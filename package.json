@@ -1,0 +1,52 @@
+{
+  "name": "taskmanager",
+  "displayName": "taskManager",
+  "description": "This extension helps you track your tasks.",
+  "publisher": "GautamSagarMallela",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "icon":"icon.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "views": {
+      "taskView": [
+        {
+          "id": "taskView",
+          "name": "Task Manager"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.addTask",
+        "title": "Add Task"
+      },
+      {
+        "command": "extension.removeTask",
+        "title": "Remove Task"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.79.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2"
+  }
+}
